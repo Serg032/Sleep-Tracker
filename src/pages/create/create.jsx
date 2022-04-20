@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {} from '@fortawesome/free-regular-svg-icons'
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import './create.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const CreatePhase = () => {
@@ -48,10 +48,10 @@ const CreatePhase = () => {
   
 
   return (
-    <section>
+    <section id="main-create">
       <h1 id="title">Create a sleep phase</h1>
       <div id = 'forForm'>
-      <form onSubmit={handleSubmit} id = 'form'>
+      <form onSubmit={handleSubmit} id = 'form-create'>
         <div id="fields">
             <div id="date">
                 <label htmlFor="date">

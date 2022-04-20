@@ -9,6 +9,7 @@ tr{
     color: black;
     border-radius: 5px;
     box-shadow: 0px 0px 4px 1px wheat;
+    transition: all 0.2s ease-in-out;
     
 }
 

@@ -3,15 +3,19 @@ import { Link } from "react-router-dom";
 import './navBar.css'
 
 const NavBar = () => {
+
   return (
     <header>
-        <div id = 'logo'>
-            Sleep Tracker
+        {/* <div id = 'logo'> */}
+        <div id="track">
+         Sleep Tracker
+
         </div>
-        <div id = 'links'>
+        {/* </div> */}
+        {/* <div id = 'links'>
             <Link id="link" to = '/'>Home</Link>
             <Link id="link" to = '/create'>Create</Link>
-        </div>
+        </div> */}
     </header>
   )
 }

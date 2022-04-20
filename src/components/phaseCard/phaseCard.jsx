@@ -6,7 +6,9 @@ import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 
 const PhaseCard = (props) => {
 
-  const phase = document.querySelector('#phase')
+  const updateForm = document.querySelector('#formUp-container')
+
+  
 
   const deletePhase = (event) => {
     
@@ -22,12 +24,18 @@ const PhaseCard = (props) => {
       .then((json) => {
         console.log('Phase deleted')
       })
+      localStorage.removeItem()
+  }
+
+  const showUpdateForm = () => {
+    updateForm.style.transform = 'translateX(0)'
+    console.log('Updated')
   }
 
   return (
     <form id="form-container">
       <tr key={props.id} id="phase" >
-        {/* <td id="data">Id: {props.id}</td> */}
+        <td id="data">Id: {props.id}</td>
         <td id="data">Date: <strong>{props.date}</strong></td>
         <td id="data">Starts at: <strong>{props.start}h</strong></td>
         <td id="data">Wake up at: <strong>{props.end}h</strong></td>
@@ -35,9 +43,9 @@ const PhaseCard = (props) => {
         <td id="data">Quality: <strong>{props.quality}</strong></td>
         <td id="data" className="buttons">
           <div id="icons">
-            <div  id="icon-container">
-              <FontAwesomeIcon id="update" icon ={faPen}/>
-            </div>
+            {/* <div  id="icon-container">
+              <FontAwesomeIcon onClick={showUpdateForm} id="update" icon ={faPen}/>
+            </div> */}
             <button type="submit" id="icon-container2" onClick={deletePhase}>
               <FontAwesomeIcon id="trash" icon = {faTrashCan}/>
             </button>
